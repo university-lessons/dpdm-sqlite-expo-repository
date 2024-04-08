@@ -31,12 +31,12 @@ export default function Home() {
       <Button onPress={all} title="all" />
 
       {cars.map((car) => (
-        <>
+        <View key={car.id}>
           <Text>{car.id} - </Text>
           <Text>
             {car.brand} {car.model} {car.hp}
           </Text>
-        </>
+        </View>
       ))}
     </View>
   );
